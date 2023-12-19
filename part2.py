@@ -13,11 +13,12 @@ def part2():
 
     display_bw_image(bw_matrix)
 
-    for i in range(50):
-        k_value = (i+1)*20
+    for i in range(100):
+        k_value = (i+1)*8
         reconstructed_image = apply_svd_to_image(bw_matrix, k_value)
         # display_bw_image_svd(reconstructed_image, k_value)
 
         frobenius[k_value] = frobenius_norm(bw_matrix-reconstructed_image)
 
     plot_dict_as_graph(frobenius, "K Values", "Frobenius", "Frobenius by K Values")
+
