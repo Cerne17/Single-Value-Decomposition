@@ -28,14 +28,6 @@ def display_bw_image_svd(image_matrix, k_value):
     # plt.savefig(f"./assets/reconstructed_images/image_{k_value}")
     # plt.show()
 
-
-def apply_svd_to_image(image_matrix, k):
-
-    U, S, Vt = np.linalg.svd(image_matrix, full_matrices=False)
-    reconstructed_image = np.dot(U[:, :k], np.dot(np.diag(S[:k]), Vt[:k, :]))
-    
-    return reconstructed_image
-
 if __name__ == '__main__':
 
     image_path = './assets/image.png'  
