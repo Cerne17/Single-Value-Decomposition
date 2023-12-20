@@ -20,8 +20,8 @@ def solveSystems(matrix, vector):
     return vector_x, u_matrix, s_matrix, vh_matrix
 
 def part1():
-    rows =    [3, 4, 3, 4]
-    columns = [3, 3, 4, 3]
+    columns=    [3, 4, 3, 4]
+    rows= [3, 3, 4, 3]
     ranks =   [3, 3, 3, 2]
 
     for i in range(4):

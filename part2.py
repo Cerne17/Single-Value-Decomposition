@@ -13,8 +13,8 @@ def part2():
 
     display_bw_image(bw_matrix)
 
-    for i in range(100):
-        k_value = (i+1)*8
+    for i in range(40):
+        k_value = (i*(i+1)//2+1)
         reconstructed_image = apply_svd_to_image(bw_matrix, k_value)
         # display_bw_image_svd(reconstructed_image, k_value)
 
